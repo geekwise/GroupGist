@@ -2,19 +2,12 @@
 
 ##TODO:
 
-1.
-2.
-3.
-4.
-5.
+1. Added in the Markdown File with progress tracking (100%)
 
 ##FEATURES:
 
-1.
-2.
-3.
-4.
-5.
+1. Email Signup Page (40%) 
+
 
 ##Milestones:
 1. completing login UI/UX changes (40%) 
