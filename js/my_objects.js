@@ -61,11 +61,11 @@ function Crud_objects() {
         this.method_getdatabase('gist_database');
     };
 /**
-<<<<<<< HEAD
+
  *  @param = database 
-=======
+
  *  @params = database 
->>>>>>> pr/6
+
  */
     this.method_getdatabase=function(database){
         window['getdatabase']=this;
@@ -95,10 +95,10 @@ obj_app.username = 'geekwisevinson';
 obj_app.github = obj_app.method_github();
 obj_app.user = obj_app.method_getuser();
 obj_app.gist_list = obj_app.method_usergists();
-<<<<<<< HEAD
+
 obj_app.email_client = new mandrill.Mandrill(atob("ZUNKYmRjcUdoS2NwSlpRMlowZ3kzUQ=="));
 
-=======
+
 
 /**
 * making initial contact with mandrill server using access token.
@@ -106,7 +106,7 @@ obj_app.email_client = new mandrill.Mandrill(atob("ZUNKYmRjcUdoS2NwSlpRMlowZ3kzU
 * also allows for email to be taken from 
 */
 obj_app.email_client = new mandrill.Mandrill(atob("ZUNKYmRjcUdoS2NwSlpRMlowZ3kzUQ=="));
->>>>>>> pr/6
+
 obj_app.email_client.method_random_code = function(){
     var text = "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -246,7 +246,7 @@ var function_addEventListenrs = function(href){
            page_turn('sign_up.html');
        });
    }
-<<<<<<< HEAD
+
    
    
    
@@ -255,6 +255,6 @@ var function_addEventListenrs = function(href){
    
    
    
-=======
->>>>>>> pr/6
+
+
 };
