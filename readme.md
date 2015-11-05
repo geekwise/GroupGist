@@ -1,4 +1,4 @@
-#groupgist
+n#groupgist
 
 ##TODO:
 
@@ -31,5 +31,8 @@
 
 > contribution from eric
 > 11-04-2015 @ 08-43-AM
+> add upstream to repo
+> add all files as of 11-05-2015 @ 8-19-AM
 
 ---
+
