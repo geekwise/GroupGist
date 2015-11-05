@@ -39,7 +39,7 @@
         var API_URL = options.apiUrl || 'https://api.github.com';
 
         // HTTP Request Abstraction
-        // =======
+        // 
         //
         // I'm not proud of this and neither should you be if you were responsible for the XMLHttpRequest spec.
 
@@ -126,7 +126,7 @@
 
 
         // User API
-        // =======
+        // 
 
         Github.User = function() {
             this.repos = function(cb) {
@@ -230,7 +230,7 @@
         };
 
         // Repository API
-        // =======
+        // 
 
         Github.Repository = function(options) {
             var repo = options.name;
@@ -731,7 +731,7 @@
         };
 
         // Gists API
-        // =======
+        // 
 
         Github.Gist = function(options) {
             var id = options.id;
@@ -818,7 +818,7 @@
         };
 
         // Issues API
-        // ==========
+        // ===
 
         Github.Issue = function(options) {
             var path = "/repos/" + options.user + "/" + options.repo + "/issues";
