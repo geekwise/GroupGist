@@ -5,7 +5,7 @@
 * 
 */
 
-var style_sheet = document.getElementsByTagName("link")[0];
+var style_sheet = document.getElementsByTagName("link")[1];
 
 
 function Crud_objects() {
@@ -95,8 +95,6 @@ obj_app.username = 'geekwisevinson';
 obj_app.github = obj_app.method_github();
 obj_app.user = obj_app.method_getuser();
 obj_app.gist_list = obj_app.method_usergists();
-
-obj_app.email_client = new mandrill.Mandrill(atob("ZUNKYmRjcUdoS2NwSlpRMlowZ3kzUQ=="));
 
 
 
