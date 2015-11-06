@@ -1,5 +1,3 @@
-n#groupgist
-
 ##TODO:
 
 1. Added in the Markdown File with progress tracking (100%)
