@@ -16,8 +16,13 @@ html,body{
 a{
   margin-top: 3vw;
   color: #659cc8;
-}
+  text-decoration: underline
 
+}
+a:hover{
+  color:#ACD6E7;
+  
+}
 
 textarea{
     width:100%;
