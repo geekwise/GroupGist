@@ -1,3 +1,6 @@
+console.log('github_api');
+
+
 /*!
  * @overview  Github.js
  *
@@ -39,7 +42,7 @@
         var API_URL = options.apiUrl || 'https://api.github.com';
 
         // HTTP Request Abstraction
-        // 
+        // =======
         //
         // I'm not proud of this and neither should you be if you were responsible for the XMLHttpRequest spec.
 
@@ -126,7 +129,7 @@
 
 
         // User API
-        // 
+        // =======
 
         Github.User = function() {
             this.repos = function(cb) {
@@ -230,7 +233,7 @@
         };
 
         // Repository API
-        // 
+        // =======
 
         Github.Repository = function(options) {
             var repo = options.name;
@@ -731,7 +734,7 @@
         };
 
         // Gists API
-        // 
+        // =======
 
         Github.Gist = function(options) {
             var id = options.id;
@@ -818,7 +821,7 @@
         };
 
         // Issues API
-        // ===
+        // ==========
 
         Github.Issue = function(options) {
             var path = "/repos/" + options.user + "/" + options.repo + "/issues";
@@ -865,25 +868,10 @@
 
 
 
-////////Debug Mode/////
-debug_mode = 0;
-
-document.addEventListener('keydown',function(){
-    if (debug_mode != 1){return;}
-    if (event.keyCode === 49){
-        window.location = 'index.html';
-    }
-    if (event.keyCode === 50){
-        window.location = 'sign_up.html';
-    }
-    if (event.keyCode === 51){
-        window.location = 'verification_page.html';
-    }
-    if (event.keyCode === 52){
-        window.location = 'profile_page.html';
-    }
-    if (event.keyCode === 53){
-        delete window.localStorage.username;
-        alert('logged out');
-    }
-});
+///Loades next script///
+if (iscript <js_files.length) {
+    script = document.createElement('script');
+    script.src = 'js/' + js_files[iscript];
+    head.appendChild(script);
+    iscript++;
+}
