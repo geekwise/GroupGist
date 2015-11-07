@@ -2,7 +2,7 @@ console.log('page_turning');
 
 
 var css_change = function(href){
-    style_sheet.href = 'css/' + href +'_html.css';
+    style_sheet.href = 'css/' + href +'.css';
 };
 
 
@@ -23,7 +23,9 @@ var all_loaded = function(){
 };
 
 
-///Loades next script///
+/**
+*  Loades next script
+*/
 if (iscript <js_files.length) {
     script = document.createElement('script');
     script.src = 'js/' + js_files[iscript];

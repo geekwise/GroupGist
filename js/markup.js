@@ -1,18 +1,17 @@
 login_html = '' +
-    '<header><div><img src="image/gitlogo.png"> ' +
+    '<header><div><img src="images/github_logo.png"> ' +
     '<h1>GroupGists</h1> </div>' +
     '</header> ' +
     '<span>' +
-    ' <h3 class="form_item">Login:</h3>' +
     '<input id="crud_input_username" type="text"  placeholder="UserName" class="form_item"/> ' +
     '<input id="crud_input_password" type="password" placeholder="Password" class="form_item"/> ' +
     '<button id="crud_submit_login" class="form_item" type="submit">Submit</button>' +
     ' <a href="#">Forgot password?</a>' +
-    '<p>not on GITCRUD <a id="sign_up_link" href="#">Sign up now</a></p>' +
+    '<p>Not on GroupGists <a id="sign_up_link" href="#">Sign up now</a></p>' +
     '</span>';
 
 sign_up_html =''+
-    '<header><div><img src="image/gitlogo.png"> '+
+    '<header><div><img src="images/github_logo.png"> '+
     '<h1>SIGN UP FORM</h1></div>'+
 '</header>'+
 '<span>'+
@@ -62,7 +61,7 @@ profile_html = ''+
 
 
 
-///Loades next script///
+/**Loades next script*/
 if (iscript <js_files.length) {
     script = document.createElement('script');
     script.src = 'js/' + js_files[iscript];
