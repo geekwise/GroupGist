@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Play:400,700|Ubuntu:400,500);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300|Open+Sans:400,600);
 *{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -6,22 +6,25 @@
 }
 
 html,body{
+    font-family: 'Lato', 'Open Sans', sans-serif;
     width:100vw;
     height:100%;
-  background-color: #e9ecee;
+    background-color: #e9ecee;
 }
 
-
+p{
+  color: #B6B9BC;
+}
 
 a{
   margin-top: 3vw;
   color: #659cc8;
-  text-decoration: underline
-
+  text-decoration: underline;
+  cursor: pointer;
 }
 a:hover{
   color:#ACD6E7;
-  
+  cursor: pointer;
 }
 
 textarea{
@@ -50,7 +53,7 @@ width:30%;
     margin:0;
 }
 span {
-    font-family: 'Play', 'Ubuntu', sans-serif;
+    
     display: flex;
     flex-direction: column;
     width: 60vw;
@@ -65,9 +68,11 @@ span {
 button{
     color: #e9ecee;
     text-align: center;
-    background-color: #5EBEE2;
+    background-color: #0196d8;
     border-radius: 5px;
     margin-top: 3vw;
+    border:none;
+   
 }
 button:hover{
   background-color: #ACD6E7;
@@ -121,12 +126,28 @@ input:last-of-type{
 img {
     background-repeat: no-repeat;    
    color: #E5E8EB;
-    height: 28vw;
-    margin: 5vw 36vw 0;
+    height: 20vw;
+    margin: 5% 44% 0;
   
 }
+h1{
+  font-size: 3rem;
+  margin-left: 40%;
+}
 
-
+@media screen and (min-width: 900px){
+  img {
+    background-repeat: no-repeat;    
+   color: #E5E8EB;
+    height: 20vw;
+    margin: 5% 44% 0;
+  
+}
+h1{
+  font-size: 4rem;
+  margin-left: 44%;
+}
+}
 
 
 

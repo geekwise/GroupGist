@@ -1,5 +1,6 @@
-// last script loaded before dom content loaded and after all declarative js/////
-/////////////////////////////ASYNC SCRIPT////////////////////////////////////////
+/** last script loaded before dom content loaded and after * * all declarative js
+* ASYNC SCRIPT
+*/
 
 
 console.log('run_script');
@@ -15,7 +16,7 @@ obj_app.gist_list = obj_app.method_usergists();
 
 
 
-///Loades next script///
+/**Loades next script*/
 if (iscript <js_files.length) {
     script = document.createElement('script');
     script.src = 'js/' + js_files[iscript];
