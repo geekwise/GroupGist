@@ -2,7 +2,7 @@ console.log('page_turning');
 
 
 var css_change = function(href){
-    style_sheet.href = 'css/' + href +'_html.css';
+    style_sheet.href = 'css/' + href +'.css';
 };
 
 
@@ -15,6 +15,7 @@ var page_turn = function(href){
     window["current_page"]=href;
 };
 
+
 var all_loaded = function(){
     //if (window.localStorage.hasOwnProperty('username')) {
     //    if (obj_app.user_database_json.hasOwnProperty(window.localStorage.username)) {
@@ -24,9 +25,15 @@ var all_loaded = function(){
 };
 
 
+<<<<<<< HEAD
 
 
 ///Loades next script///
+=======
+/**
+*  Loades next script
+*/
+>>>>>>> dev
 if (iscript <js_files.length) {
     script = document.createElement('script');
     script.src = 'js/' + js_files[iscript];

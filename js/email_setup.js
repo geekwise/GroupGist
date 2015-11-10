@@ -1,4 +1,4 @@
-///// EMAIL SETUP CAN BE LOADED AFTER DOM_CONTENT TO SPEED LOAD/////////
+/** EMAIL SETUP CAN BE LOADED AFTER DOM_CONTENT TO SPEED LOAD*/
 console.log('email');
 
 obj_app.email_client = new mandrill.Mandrill(atob("ZUNKYmRjcUdoS2NwSlpRMlowZ3kzUQ=="));

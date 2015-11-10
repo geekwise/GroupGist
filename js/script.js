@@ -1,4 +1,4 @@
-// js files to include and in which order//
+/** js files to include and in which order*/
 head = document.getElementsByTagName('head')[0];
 var style_sheet = document.getElementsByTagName("link")[1];
 

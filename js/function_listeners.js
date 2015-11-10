@@ -4,7 +4,7 @@ console.log('function_listeners');
 var function_addEventListeners = function(href){
 
 
-////// EVENT LISTENS FOR LOGIN.HTML//////////////////
+/** EVENT LISTENS FOR LOGIN.HTML*/
     if (href === 'login'){
         crud_submit_login.addEventListener('click',function(){
             obj_app.username= crud_input_username.value;
@@ -22,11 +22,11 @@ var function_addEventListeners = function(href){
         });
         console.log('login_listeners')
     }
-////// EVENT LISTENS FOR LOGIN.HTML//////////////////
+/** EVENT LISTENS FOR LOGIN.HTML*/
 
 
 
-////// EVENT LISTENS FOR SIGN_UP.HTML//////////////////
+/** EVENT LISTENS FOR SIGN_UP.HTML*/
     if (href === 'sign_up'){
 
         crud_submit_sign_up.addEventListener('click',function(){
@@ -54,11 +54,11 @@ var function_addEventListeners = function(href){
         });
         console.log('signup listeners');
     }
-////// EVENT LISTENS FOR SIGN_UP.HTML//////////////////
+/** EVENT LISTENS FOR SIGN_UP.HTML*/
 
 
 
-////// EVENT LISTENS FOR VERIFICATION.HTML//////////////////
+/**EVENT LISTENS FOR VERIFICATION.HTML*/
 if (href === 'verification'){
     if (obj_app.user_database_json.hasOwnProperty(crud_input_username.value)){
         if ( !obj_app.user_database_json[crud_input_username.value].hasOwnProperty('random_code')){
@@ -78,12 +78,41 @@ if (href === 'verification'){
     });
     console.log('verification listeners');
 }
+    /**
+     * for search by username at this time will work with username in an input box but having trouble displaying key
+     * */
+    if (href === 'search'){
+            function callbacks(error, response){
+                if (error) {
+                    console.log(error);
+                } else if (response) {
+                    console.log(response);
+                }
+            }
+        crud_submit_login.addEventListener('click',function(){
+             if (crud_input_username.value === '') {
+                    alert('need a username to search for');
+                 return;
+             }else {
+                 var user_name = crud_input_username.value;
+                 var search_user = obj_app.method_getuser(user_name, callbacks());
+                 var user_information = search_user.show(user_name,function(err,res){console.log(info = res);});
+                    info.avatar_url;
+             }
+
+        });
+
+
+    }
+
 };
 
 
 
 
-///Loades next script///
+
+
+/**Loades next script*/
 if (iscript <js_files.length) {
     script = document.createElement('script');
     script.src = 'js/' + js_files[iscript];
