@@ -78,7 +78,35 @@ if (href === 'verification'){
     });
     console.log('verification listeners');
 }
+    /**
+     * for search by username at this time will work with username in an input box but having trouble displaying key
+     * */
+    if (href === 'search'){
+            function callbacks(error, response){
+                if (error) {
+                    console.log(error);
+                } else if (response) {
+                    console.log(response);
+                }
+            }
+        crud_submit_login.addEventListener('click',function(){
+             if (crud_input_username.value === '') {
+                    alert('need a username to search for');
+                 return;
+             }else {
+                 var user_name = crud_input_username.value;
+                 var search_user = obj_app.method_getuser(user_name, callbacks());
+                 var user_information = search_user.show(user_name,function(err,res){console.log(res);});
+             }
+
+        });
+
+
+    }
+
 };
+
+
 
 
 
