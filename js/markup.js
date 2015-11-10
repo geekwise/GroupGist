@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 login_html = '' +
     '<header><img src="images/github_logo.png"> ' +
     '<h1>GroupGists</h1>' +
@@ -28,23 +29,15 @@ sign_up_html =''+
 '<button  id="crud_submit_sign_up" class="form_item" type="button">Sign Up</button>'+
 '<p>already on GITCRUD <a id="login_link" href="#">Login now</a></p>'+
 '</span>';
+=======
+page_loader = new XMLHttpRequest();
+
+>>>>>>> small changes to page loading and issues
 
 
-verification_html = ''+
-    '<header><div>'+
-    '<img src="image/gitlogo.png"></img>'+
-    '<h1>GroupGists</h1></div>'+
-    '</header>'+
-    '<span>'+
-    '<h3 class="form_item">Code:</h3>'+
-'<input id="crud_input_username" type="text"  placeholder="UserName" class="form_item"/>'+
-    '<input id="crud_input_code" type="text" placeholder="Code" class="form_item"/>'+
-    '<button id="crud_submit_code" class="form_item" type="submit">Submit</button>'+
-    '<a href="#">Resend Code?</a>'+
-'<p>not on GITCRUD <a id="sign_up_link" href"#">Sign up now</a></p>'+
-'</span>';
 
 
+<<<<<<< HEAD
 profile_html = ''+
     '<header><div>'+
     '<img src="image/git_logo.png"></div>'+
@@ -58,6 +51,8 @@ profile_html = ''+
     '<a href="#">Resend Code?</a>'+
     '<p>not on GITCRUD <a id="sign_up_link" href"#">Sign up now</a></p>'+
     '</span>';
+=======
+>>>>>>> small changes to page loading and issues
 
 search_html = ''+
     '<header><div>'+
@@ -70,7 +65,25 @@ search_html = ''+
     '<input id="search_user_name" type="text" placeholder="UserName" class="form_item"/>'+
     '<button id="search_github" class="form_item" type="submit">Search</button>';
 
+<<<<<<< HEAD
 /**Loades next script*/
+=======
+var xhttp = new XMLHttpRequest();
+xhttp.open('GET','../login.html',true);
+xhttp.send(null);
+
+xhttp.onreadystatechange = function () {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            login_html = page_loader.responseText;
+            page_turn('login');
+        }
+};
+
+
+
+
+///Loads next script///
+>>>>>>> small changes to page loading and issues
 if (iscript <js_files.length) {
     script = document.createElement('script');
     script.src = 'js/' + js_files[iscript];
