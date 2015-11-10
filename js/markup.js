@@ -3,7 +3,7 @@ login_html = '' +
     '<h1>GroupGists</h1> </div>' +
     '</header> ' +
     '<span>' +
-    '<input id="s" type="text"  placeholder="UserName" class="form_item"/> ' +
+    '<input id="crud_input_username" type="text"  placeholder="UserName" class="form_item"/> ' +
     '<input id="crud_input_password" type="password" placeholder="Password" class="form_item"/> ' +
     '<button id="crud_submit_login" class="form_item" type="submit">Submit</button>' +
     ' <a href="#">Forgot password?</a>' +
