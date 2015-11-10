@@ -10,13 +10,13 @@ js_files = [
     'github_api.js',
     'mandrill_api.js',
     'markup.js',
-    'display_detect.js',
     'page_turning.js',
     'function_listeners.js',
     'object_constructors.js',
     'run_script.js',
     'email_setup.js',
-    'dom_content_loaded.js'
+    'dom_content_loaded.js',
+    'display_detect.js'
 ];
 
 
