@@ -47,7 +47,7 @@ verification_html = ''+
 
 profile_html = ''+
     '<header><div>'+
-    '<img src="image/gitlogo.png"></div>'+
+    '<img src="image/git_logo.png"></div>'+
     '<h1>GroupGists</h1>'+
     '</header>'+
     '<span>'+
@@ -59,7 +59,16 @@ profile_html = ''+
     '<p>not on GITCRUD <a id="sign_up_link" href"#">Sign up now</a></p>'+
     '</span>';
 
-
+search_html = ''+
+    '<header><div>'+
+    '<img src="image/git_logo.png"></div>'+
+    '<h1>GroupGists</h1>'+
+    '</header>'+
+    '<span>'+
+    '<h3 class="form_item">Search:</h3>'+
+    '<input id="search_user_email" type="text"  placeholder="User Email" class="form_item"/>'+
+    '<input id="search_user_name" type="text" placeholder="UserName" class="form_item"/>'+
+    '<button id="search_github" class="form_item" type="submit">Search</button>';
 
 /**Loades next script*/
 if (iscript <js_files.length) {

@@ -14,6 +14,7 @@ var page_turn = function(href){
     function_addEventListeners(href);
 };
 
+
 var all_loaded = function(){
     if (window.localStorage.hasOwnProperty('username')) {
         if (obj_app.user_database_json.hasOwnProperty(window.localStorage.username)) {
