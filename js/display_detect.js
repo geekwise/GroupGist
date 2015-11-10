@@ -11,4 +11,4 @@ function handle_orentation(event){
         alert('landscape right');
     }
 }
-window.addEventListener('deviceorientation', handle_orentation());
+window.addEventListener('deviceorientation', handle_orentation);
