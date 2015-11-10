@@ -7,10 +7,10 @@ var style_sheet = document.getElementsByTagName("link")[1];
  * js_ files is an array of js script to be loaded in sequence
  * */
 js_files = [
-    'display_detect.js',
     'github_api.js',
     'mandrill_api.js',
     'markup.js',
+    'display_detect.js',
     'page_turning.js',
     'function_listeners.js',
     'object_constructors.js',
