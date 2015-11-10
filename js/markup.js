@@ -1,13 +1,13 @@
 login_html = '' +
-    '<header><div><img src="images/github_logo.png"> ' +
-    '<h1>GroupGists</h1> </div>' +
+    '<header><img src="images/github_logo.png"> ' +
+    '<h1>GroupGists</h1>' +
     '</header> ' +
     '<span>' +
     '<input id="crud_input_username" type="text"  placeholder="UserName" class="form_item"/> ' +
     '<input id="crud_input_password" type="password" placeholder="Password" class="form_item"/> ' +
     '<button id="crud_submit_login" class="form_item" type="submit">Submit</button>' +
-    ' <a href="#">Forgot password?</a>' +
-    '<p>Not on GroupGists <a id="sign_up_link" href="#">Sign up now</a></p>' +
+    '<div><a href="#">Forgot password?</a><br>' +
+    '<p>Not on GroupGists <a id="sign_up_link" href="#">Sign up now</a></p></div>' +
     '</span>';
 
 sign_up_html =''+

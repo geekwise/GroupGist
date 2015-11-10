@@ -96,7 +96,8 @@ if (href === 'verification'){
              }else {
                  var user_name = crud_input_username.value;
                  var search_user = obj_app.method_getuser(user_name, callbacks());
-                 var user_information = search_user.show(user_name,function(err,res){console.log(res);});
+                 var user_information = search_user.show(user_name,function(err,res){console.log(info = res);});
+                    info.avatar_url;
              }
 
         });
