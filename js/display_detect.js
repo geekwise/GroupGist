@@ -21,9 +21,10 @@
 //}
 //body.addEventListener('deviceorientation', handle_orentation);
 
-var supportsOrientationChange = "onorientationchange" in window,
-    orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";
+var supports_orientation_change = "onorientationchange" in window,
+    orientation_event = supports_orientation_change ? "orientationchange" : "resize";
 
-window.addEventListener(orientationEvent, function() {
-    alert('HOLY ROTATING SCREENS BATMAN:' + window.orientation + " " + screen.width);
+window.addEventListener(orientation_event, function() {
+    console.log( window.orientation + " " + screen.width);
+    body.(matchMedia('(max-width: 600px)').matches);
 }, false);
