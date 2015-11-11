@@ -35,8 +35,8 @@
         color: #E5E8EB;
         /*height: 20%;*/
         margin: .3% 0 0;
-        width: 6.5em;
-        height: 6.5em;
+        width: 4.5em;
+        height: 4.5em;
 
     }
 
@@ -50,7 +50,7 @@
     p{
         color: #B6B9BC;
         -webkit-margin-before: .5rem;
-        margin-before: .5rem;
+
     }
 
     a{
@@ -66,17 +66,17 @@
     }
     input{
         text-align: center;
-        height: 2rem;
+        height: 1.5rem;
     }
 
 
     input:nth-of-type(1){
         margin-bottom: 0;
-        border-radius: .3rem .3rem 0px 0px;
+        border-radius: .3rem .3rem 0 0;
     }
     input:last-of-type{
         margin-top: 0;
-        border-radius: 0px 0px .3rem .3rem;
+        border-radius: 0 0 .3rem .3rem;
     }
     button{
         color: #e9ecee;
@@ -94,7 +94,7 @@
         background-repeat: no-repeat;
         color: #E5E8EB;
         /*height: 20%;*/
-        margin: 10% 0 0;
+        margin: 15% 0 0;
         width: 10.5em;
         height: 10.5em;
 
