@@ -26,5 +26,5 @@ var supports_orientation_change = "onorientationchange" in window,
 
 window.addEventListener(orientation_event, function() {
     console.log( window.orientation + " " + screen.width);
-    body.(matchMedia('(max-width: 600px)').matches);
+    body.(matchMedia("(max-width: 767px)").matches);
 }, false);
