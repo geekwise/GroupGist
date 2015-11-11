@@ -12,7 +12,8 @@
     }
     p{
         color: #B6B9BC;
-        margin: 0;
+       -webkit-margin-before: .5rem;
+        margin-before: .5rem;
     }
 
     a{
@@ -33,7 +34,7 @@
         background-repeat: no-repeat;
         color: #E5E8EB;
         /*height: 20%;*/
-        margin: 1% 0 0;
+        margin: .3% 0 0;
         width: 6.5em;
         height: 6.5em;
 
@@ -48,7 +49,8 @@
 
     p{
         color: #B6B9BC;
-
+        -webkit-margin-before: .5rem;
+        margin-before: .5rem;
     }
 
     a{
@@ -91,7 +93,7 @@
         background-repeat: no-repeat;
         color: #E5E8EB;
         /*height: 20%;*/
-        margin: 6% 0 0;
+        margin: 10% 0 0;
         width: 10.5em;
         height: 10.5em;
 
@@ -105,7 +107,8 @@
 
     p{
         color: #B6B9BC;
-
+        -webkit-margin-before: .5rem;
+        margin-before: .5rem;
     }
 
     a{
