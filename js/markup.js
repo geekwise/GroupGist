@@ -41,7 +41,7 @@ verification_html = ''+
     '<input id="crud_input_code" type="text" placeholder="Code" class="form_item"/>'+
     '<button id="crud_submit_code" class="form_item" type="submit">Submit</button>'+
     '<a href="#">Resend Code?</a>'+
-'<p>not on GITCRUD <a id="sign_up_link" href"#">Sign up now</a></p>'+
+'<p>not on GITCRUD <a id="sign_up_link" href"#">Sign up</a></p>'+
 '</span>';
 
 
