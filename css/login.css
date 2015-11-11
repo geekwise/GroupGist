@@ -121,7 +121,7 @@ input:last-of-type{
 }
 
 .alert_hidden{
-    height:0.01px;
+    height: .01rem;
     display:none;
     overflow:hidden;
 }
