@@ -72,20 +72,21 @@
 
     input:nth-of-type(1){
         margin-bottom: 0;
-        border-radius: 5px 5px 0px 0px;
+        border-radius: .3rem .3rem 0px 0px;
     }
     input:last-of-type{
         margin-top: 0;
-        border-radius: 0px 0px 5px 5px;
+        border-radius: 0px 0px .3rem .3rem;
     }
     button{
         color: #e9ecee;
         text-align: center;
         background-color: #0196d8;
-        border-radius: 5px;
+        border-radius: .3rem;
         margin-top: 3%;
         border:none;
-        padding-top: .2rem;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }
 @media only screen and (max-width:600px){
