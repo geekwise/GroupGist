@@ -101,7 +101,9 @@ if (href === 'verification'){
                      console.log(info = res);
 
                  });
-                    info.avatar_url;
+                    var avatar_image = info.avatar_url;
+                 var profile_picture = body.createElement('img')[0].innerHTML;
+                 profile_picture.insertChildBefore()
              }
 
         });
