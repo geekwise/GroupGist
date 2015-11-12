@@ -85,7 +85,7 @@ button{
     text-align: center;
     background-color: #0196d8;
     border-radius: .3rem;
-    margin-top: 3%;
+    margin: 1rem 0 0 0;
     border:none;
 }
 
@@ -112,7 +112,7 @@ input:last-of-type{
 
 .form_item{
 
-    padding: .8rem 0;
+    padding: .2rem 0;
     font-size: 1.5rem;
 
 }
@@ -121,7 +121,7 @@ input:last-of-type{
 }
 
 .alert_hidden{
-    height:0.01px;
+    height: .01rem;
     display:none;
     overflow:hidden;
 }
@@ -147,7 +147,9 @@ img {
 
 h1{
   font-size: 3rem;
+    margin-bottom: 1.5rem;
   /*margin-left: 40%;*/
+    color: #737273
 }
 
 
