@@ -26,10 +26,13 @@ var all_loaded = function(){
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
 *  Loades next script
 */
 =======
+=======
+>>>>>>> b0b7477b29eb5e9692a82bc6bed06b27ddebd752
 
 
 ///Loades next script///
