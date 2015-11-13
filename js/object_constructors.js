@@ -70,8 +70,8 @@ function Crud_objects() {
         }
         this[db +"_object_unread"].read(function(err,res){
             window['getdatabase'][db +"_object_read"] = res;// enables content to be readable
-            window['getdatabase'][db +"_json"] = window['getdatabase'][db +"_object_read"].files[db+".JSON"].content;//gets content as string
-            window['getdatabase'][db +"_json"] = JSON.parse( window['getdatabase'][db +"_json"] );// turns string into object
+            window['getdatabase'][db +"_json"] = window['getdatabase'][db +"_object_read"].files[db+".JSON"].content;/**gets content as string*/
+            window['getdatabase'][db +"_json"] = JSON.parse( window['getdatabase'][db +"_json"]);/**turns string into object*/
             if (db === 'gist_database') {
                 all_loaded();
                 page_turn('login');
