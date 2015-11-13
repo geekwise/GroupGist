@@ -23,7 +23,7 @@ obj_app.email_client.method_send_email = function(){
 obj_app.email_client.method_params =function(){
         console.log(this);
         obj_app.email_client.method_random_code();
-        this.html_string =  "Code:"+ "  " + this.random_code + '\ <br />'+"Congratulations  " + crud_input_username.value + "! please enter code to finished the sign up process. thank you and have a nice day!";
+        this.html_string =  "Code:"+ " " + this.random_code + '\ <br />'+"Congratulations  " + crud_input_username.value + "! please enter code to finished the sign up process. thank you and have a nice day!";
         this.params = {
             "message": {
                 "from_email":"vinsonfernandez27@gmail.com",
