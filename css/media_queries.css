@@ -15,7 +15,7 @@
     p{
         color: #B6B9BC;
        -webkit-margin-before: .5rem;
-        margin-before: .5rem;
+        margin-before: -0.5rem;
     }
 
     a{

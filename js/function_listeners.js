@@ -11,7 +11,7 @@ var function_addEventListeners = function(href) {
      * */
     if (href === 'login') {
         crud_submit_login.addEventListener('click', function () {
-            obj_app.username = crud_input_username.value;
+            obj_app.username = crud_input_username.value.toLowerCase();
             obj_app.password = crud_input_password.value;
             if (obj_app.user_database_json.hasOwnProperty(crud_input_username.value)) {
                 if (obj_app.user_database_json[crud_input_username.value].password === crud_input_password.value) {
@@ -81,7 +81,7 @@ var function_addEventListeners = function(href) {
             if (obj_app.user_database_json.hasOwnProperty(crud_input_username.value)) {
                 if (obj_app.user_database_json[crud_input_username.value].random_code === crud_input_code.value) {
                     alert('successfully verified');
-                    page_turn('profile_html');
+                    page_turn('profile');
                 }
             } else {
                 alert('user not found')
@@ -92,11 +92,22 @@ var function_addEventListeners = function(href) {
         });
         console.log('verification listeners');
     }
+/**
+ * profile page is where the customers information will go and anything they would like to change it also allows them to look at their
+ * gists and repos and groups they belong to.
+ * */
+    if(href === 'profile') {
+
+
+
+    }
+    /** this is just here to separate the pages*/
+
     /**
      * for search by username at this time will work with username in an input box but having trouble displaying key
      * */
     if (href === 'search') {
-        submit_search.addEventListener('click', function () {
+        search_github_button.addEventListener('click', function () {
             var content_add = function (from, to) {
                 xmler = new XMLHttpRequest();
                 xmler.open("GET", from, true);
@@ -131,14 +142,14 @@ var function_addEventListeners = function(href) {
         }
     }
 
-    crud_submit_login.addEventListener('click', function () {
-        if (crud_input_username.value === '') {
+    search_github_button.addEventListener('click', function () {
+        if (search_user_name.value === '') {
             alert('need a username to search for');
 
         } else {
-            var user_name = crud_input_username.value;
+            var user_name = search_user_name.value;
             var search_user = obj_app.method_getuser(user_name, callbacks());
-            var user_information = search_user.show(user_name, function (err, res) {
+                    search_user.show(user_name, function (err, res) {
 
                 console.log(info = res);
 
