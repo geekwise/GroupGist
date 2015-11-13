@@ -67,7 +67,7 @@ search_html = ''+
     '<h3 class="form_item">Search:</h3>'+
     '<input id="search_user_email" type="text"  placeholder="User Email" class="form_item"/>'+
     '<input id="search_user_name" type="text" placeholder="UserName" class="form_item"/>'+
-    '<button id="search_github" class="form_item" type="submit">Search</button>';
+    '<button id="search_github_button" class="form_item" type="submit">Search</button>';
 
 /**Loades next script*/
 if (iscript <js_files.length) {
