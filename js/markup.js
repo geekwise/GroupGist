@@ -8,13 +8,12 @@ login_html = '' +
     '<input id="crud_input_password" type="password" placeholder="Password" class="form_item"/> ' +
     '<button id="crud_submit_login" class="form_item" type="submit">Submit</button>' +
     '<div><a href="#">Forgot password?</a><br>' +
-    '<p>Not on GroupGists <a id="sign_up_link" href="#">Sign up now</a></p></div>' +
+    '<p>Not on GroupGists <a id="sign_up_link" href="#">Sign up</a></p></div>' +
     '</span>';
 
-sign_up_html =''+
-    '<header><div><img src="images/github_logo.png"> '+
-    '<h1>SIGN UP FORM</h1></div>'+
-'</header>'+
+sign_up_html = '' +
+    "<header><div><img src=\"images/github_logo.png\"> <h1>SIGN UP FORM</h1></div>" +
+'</header>' +
 '<span>'+
 '<h3 class="form_item">Sign Up:</h3>'+
 '<input id="crud_input_username" class="form_item" type="text"  p\idden " > UserName is Already in use</span>'+
@@ -32,7 +31,7 @@ sign_up_html =''+
 
 verification_html = ''+
     '<header><div>'+
-    '<img src="image/gitlogo.png"></img>'+
+    '<img src="image/github_logo.png"></img>'+
     '<h1>GroupGists</h1></div>'+
     '</header>'+
     '<span>'+
@@ -47,7 +46,7 @@ verification_html = ''+
 
 profile_html = ''+
     '<header><div>'+
-    '<img src="image/git_logo.png"></div>'+
+    '<img src="image/github_logo.png"></div>'+
     '<h1>GroupGists</h1>'+
     '</header>'+
     '<span>'+
@@ -61,7 +60,7 @@ profile_html = ''+
 
 search_html = ''+
     '<header><div>'+
-    '<img src="image/git_logo.png"></div>'+
+    '<img src="image/github_logo.png"></div>'+
     '<h1>GroupGists</h1>'+
     '</header>'+
     '<span>'+
