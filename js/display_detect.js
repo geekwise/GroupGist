@@ -20,11 +20,11 @@
 //    }
 //}
 //body.addEventListener('deviceorientation', handle_orentation);
-
-var supports_orientation_change = "onorientationchange" in window,
-    orientation_event = supports_orientation_change ? "orientationchange" : "resize";
-
-window.addEventListener(orientation_event, function() {
-    console.log( window.orientation + " " + screen.width);
-    body.(matchMedia("(max-width: 767px)").matches);
-}, false);
+//
+//var supports_orientation_change = "onorientationchange" in window,
+//    orientation_event = supports_orientation_change ? "orientationchange" : "resize";
+//
+//window.addEventListener(orientation_event, function() {
+//    console.log( window.orientation + " " + screen.width);
+//    body.(matchMedia("(max-width: 767px)").matches);
+//}, false);
