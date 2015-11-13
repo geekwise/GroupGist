@@ -4,7 +4,11 @@ console.log('function_listeners');
 var function_addEventListeners = function(href){
 
 
-/** EVENT LISTENS FOR LOGIN.HTML*/
+/**
+ * EVENT LISTENS FOR LOGIN.HTML
+ * which when login into will direct to a profile page that has not be fully tested or beautified.
+ *
+ * */
     if (href === 'login'){
         crud_submit_login.addEventListener('click',function(){
             obj_app.username= crud_input_username.value;
@@ -13,6 +17,8 @@ var function_addEventListeners = function(href){
                 if(obj_app.user_database_json[crud_input_username.value].password === crud_input_password.value){
                     alert('successfully logged in');
                     window.localStorage.username = [obj_app.username];
+                    page_turn('profile_html');/**link to profile page not to verification after login*/
+
                 }else{alert('username does not match password')}
             }else{alert('username not found. Sign Up?')}
         });
@@ -70,6 +76,7 @@ if (href === 'verification'){
         if (obj_app.user_database_json.hasOwnProperty(crud_input_username.value)){
             if ( obj_app.user_database_json[crud_input_username.value].random_code === crud_input_code.value){
                 alert('successfully verified');
+                page_turn('profile_html');
             }
         }else{alert('user not found')}
     });
@@ -92,12 +99,20 @@ if (href === 'verification'){
         crud_submit_login.addEventListener('click',function(){
              if (crud_input_username.value === '') {
                     alert('need a username to search for');
-                 return;
-             }else {
-                 var user_name = crud_input_username.value;
-                 var search_user = obj_app.method_getuser(user_name, callbacks());
-                 var user_information = search_user.show(user_name,function(err,res){console.log(info = res);});
-                    info.avatar_url;
+
+                }else {
+                    var user_name = crud_input_username.value;
+                    var search_user = obj_app.method_getuser(user_name, callbacks());
+                    var user_information = search_user.show(user_name,function(err,res){
+
+                        console.log(info = res);
+
+                    });
+                    var avatar_image = info.avatar_url;
+                    var image_tag = document.createElement('img');
+                    var profile_pic = body.appendChild(image_tag);
+
+                        profile_pic.src = avatar_image
              }
 
         });
