@@ -32,7 +32,7 @@ sign_up_html =''+
 
 verification_html = ''+
     '<header><div>'+
-    '<img src="image/gitlogo.png"></img>'+
+    '<img src="images/github_logo.png"></img>'+
     '<h1>GroupGists</h1></div>'+
     '</header>'+
     '<span>'+
@@ -47,8 +47,9 @@ verification_html = ''+
 
 profile_html = ''+
     '<header><div>'+
-    '<img src="image/git_logo.png"></div>'+
+    '<img src="images/github_logo.png"></div>'+
     '<h1>GroupGists</h1>'+
+    '<a id="link_profile" href="#">search</a>'+
     '</header>'+
     '<span>'+
     '<h3 class="form_item">PROFILE:</h3>'+
@@ -61,7 +62,7 @@ profile_html = ''+
 
 search_html = ''+
     '<header><div>'+
-    '<img src="image/git_logo.png"></div>'+
+    '<img src="images/github_logo.png"></div>'+
     '<h1>GroupGists</h1>'+
     '</header>'+
     '<span>'+
