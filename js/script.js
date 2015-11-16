@@ -39,7 +39,8 @@ js_files = [
     'object_constructors.js',
     'run_script.js',
     'email_setup.js',
-    'dom_content_loaded.js'
+    'dom_content_loaded.js',
+    'display_detect.js'
 ];
 
 

@@ -19,7 +19,7 @@ header{
 
 p{
     color: #B6B9BC;
-    margin: 0;
+    margin: -0.5rem;
 }
 
 a{
@@ -27,7 +27,7 @@ a{
   color: #659cc8;
   text-decoration: underline;
   cursor: pointer;
-  margin: 5px 0 0 ;
+  margin: 2% 0 0 ;
 }
 a:hover{
   color:#ACD6E7;
@@ -50,7 +50,7 @@ textarea{
 
 #gist_wrapper{
     width:100%;
-    border:1px solid red;
+    border: .16rem solid red;
     display:flex;
     margin:0;
 
@@ -84,8 +84,8 @@ button{
     color: #e9ecee;
     text-align: center;
     background-color: #0196d8;
-    border-radius: 5px;
-    margin-top: 3%;
+    border-radius: .3rem;
+    margin: 1rem 0 0 0;
     border:none;
 }
 
@@ -112,7 +112,7 @@ input:last-of-type{
 
 .form_item{
 
-    padding:10px 0;
+    padding: .2rem 0;
     font-size: 1.5rem;
 
 }
@@ -121,7 +121,7 @@ input:last-of-type{
 }
 
 .alert_hidden{
-    height:0.01px;
+    height: .01rem;
     display:none;
     overflow:hidden;
 }
@@ -139,7 +139,7 @@ img {
     background-repeat: no-repeat;    
    color: #E5E8EB;
     /*height: 20%;*/
-    margin: 5% 0 0;
+    margin: 9.8% 0 0;
     width: 12em;
     height: 12em;
 
@@ -147,71 +147,9 @@ img {
 
 h1{
   font-size: 3rem;
+    margin-bottom: 1.5rem;
   /*margin-left: 40%;*/
+    color: #737273
 }
 
-@media screen and (max-width: 991px){
-  img {
-    background-repeat: no-repeat;    
-   color: #E5E8EB;
-    height: 20%;
-    margin: 5% 0 0;
-  
-}
-h1{
-  font-size: 4rem;
-  /*margin-left: 44%;*/
-    }
-    p{
-        color: #B6B9BC;
-        margin: 0;
-    }
-
-    a{
-        /*margin: 3% 2% 0 0;*/
-        color: #659cc8;
-        text-decoration: underline;
-        cursor: pointer;
-
-    }
-    a:hover{
-        color:#ACD6E7;
-        cursor: pointer;
-    }
-}
-
-@media screen and (max-width: 767px){
-    img {
-        background-repeat: no-repeat;
-        color: #E5E8EB;
-        /*height: 20%;*/
-        margin: 2% 0 0;
-        width: 11em;
-        height: 11em;
-
-    }
-
-    h1{
-        font-size: 2.5rem;
-        /*margin-left: 40%;*/
-    }
-
-
-    p{
-        color: #B6B9BC;
-        margin: 0;
-    }
-
-    a{
-        /*margin: 3% 2% 0 0;*/
-        color: #659cc8;
-        text-decoration: underline;
-        cursor: pointer;
-
-    }
-    a:hover{
-        color:#ACD6E7;
-        cursor: pointer;
-    }
-}
 
