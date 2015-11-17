@@ -37,6 +37,22 @@ function Crud_objects() {
         return this.github.getUser();
     };
 /**CREATE USER OBJECT*/
+  
+  /** Creates new gist for database*/
+    this.method_creategists = function(){
+        this.gists.create({"description":"user_database",
+          "public": false,
+          "files": {
+            "user_database.JSON": {
+              "content": ""
+              }
+            }
+          }, function(err, rest) {
+            console.log(rest);
+          });
+        return;
+    })
+    }
 
 
 /**CREATE USER GIST LIST - HAS CALLBACK SO SYNC CAN BE ISSUE [WARNING]*/
@@ -48,10 +64,11 @@ function Crud_objects() {
         });
     };
 /**CREATE USER GIST LIST - HAS CALLBACK SO SYNC CAN BE ISSUE [WARNING]*/
-
+    
 
 /**CALLBACK FOR CREATE USER GIST LIST - THIS WILL RUN WHEN DATA IS RETURNED*/
     this.callback_usergists= function(){
+     
         this.method_getdatabase('user_database');
         this.method_getdatabase('email_database');
         this.method_getdatabase('groups_database');
