@@ -12,28 +12,21 @@ var page_turn = function(href){
    css_change(href);
     body.innerHTML = eval(page);
     function_addEventListeners(href);
-    window["current_page"]=href;
 };
 
 
 var all_loaded = function(){
-    //if (window.localStorage.hasOwnProperty('username')) {
-    //    if (obj_app.user_database_json.hasOwnProperty(window.localStorage.username)) {
-    //        body.innerHTML = verification_html;
-    //    }
-    //}
+    if (window.localStorage.hasOwnProperty('username')) {
+        if (obj_app.user_database_json.hasOwnProperty(window.localStorage.username)) {
+            body.innerHTML = verification_html;
+        }
+    }
 };
 
 
-<<<<<<< HEAD
-
-
-///Loades next script///
-=======
 /**
 *  Loades next script
 */
->>>>>>> dev
 if (iscript <js_files.length) {
     script = document.createElement('script');
     script.src = 'js/' + js_files[iscript];

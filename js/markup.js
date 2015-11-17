@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-page_loader = new XMLHttpRequest();
-
-=======
 login_html = '' +
     '<header><img src="images/github_logo.png"> ' +
     '<h1>GroupGists</h1>' +
@@ -31,11 +27,8 @@ sign_up_html = '' +
 '<button  id="crud_submit_sign_up" class="form_item" type="button">Sign Up</button>'+
 '<p>already on GITCRUD <a id="login_link" href="#">Login now</a></p>'+
 '</span>';
->>>>>>> dev
 
 
-<<<<<<< HEAD
-=======
 verification_html = ''+
     '<header><div>'+
     '<img src="image/github_logo.png"></img>'+
@@ -49,11 +42,8 @@ verification_html = ''+
     '<a href="#">Resend Code?</a>'+
 '<p>not on GITCRUD <a id="sign_up_link" href"#">Sign up</a></p>'+
 '</span>';
->>>>>>> origin/dev
 
 
-<<<<<<< HEAD
-=======
 profile_html = ''+
     '<header><div>'+
     '<img src="image/github_logo.png"></div>'+
@@ -67,7 +57,6 @@ profile_html = ''+
     '<a href="#">Resend Code?</a>'+
     '<p>not on GITCRUD <a id="sign_up_link" href"#">Sign up now</a></p>'+
     '</span>';
->>>>>>> dev
 
 search_html = ''+
     '<header><div>'+
@@ -80,25 +69,7 @@ search_html = ''+
     '<input id="search_user_name" type="text" placeholder="UserName" class="form_item"/>'+
     '<button id="search_github_button" class="form_item" type="submit">Search</button>';
 
-<<<<<<< HEAD
-var xhttp = new XMLHttpRequest();
-xhttp.open('GET','../login.html',true);
-xhttp.send(null);
-
-xhttp.onreadystatechange = function () {
-        if (xhttp.readyState == 4 && xhttp.status == 200) {
-            login_html = page_loader.responseText;
-            page_turn('login');
-        }
-};
-
-
-
-
-///Loads next script///
-=======
 /**Loades next script*/
->>>>>>> dev
 if (iscript <js_files.length) {
     script = document.createElement('script');
     script.src = 'js/' + js_files[iscript];

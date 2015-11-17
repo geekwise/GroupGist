@@ -3,30 +3,6 @@ head = document.getElementsByTagName('head')[0];
 var style_sheet = document.getElementsByTagName("link")[1];
 
 
-pages_array = [
-    'login',
-    'sign_up',
-    'verification',
-    'profile'
-];
-
-debug_mode =1;
-document.addEventListener('keydown',function(event){
-
-    if (debug_mode === 1) {
-        if (event.keyCode == 39) {
-            if (pages_array.indexOf(current_page)< pages_array.length){
-                current_page = pages_array[pages_array.indexOf(current_page)+1];
-            }else{
-                current_page = pages_array[0];
-            }
-            page_turn(current_page);
-        }
-    }
-
-});
-
-
 /**
  * js_ files is an array of js script to be loaded in sequence
  * */
