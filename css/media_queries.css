@@ -15,7 +15,7 @@
     p{
         color: #B6B9BC;
        -webkit-margin-before: .5rem;
-        margin-before: .5rem;
+        margin-before: -0.5rem;
     }
 
     a{
@@ -31,7 +31,7 @@
     }
 }
 
-@media only screen and (max-width: 767px){
+@media screen and (max-width: 767px) and (orientation: landscape){
     img {
         background-repeat: no-repeat;
         color: #E5E8EB;
@@ -91,7 +91,7 @@
         padding-bottom: 0;
     }
 }
-@media only screen and (max-width:600px){
+@media only screen and (orientation: portrait){
     img {
         background-repeat: no-repeat;
         color: #E5E8EB;

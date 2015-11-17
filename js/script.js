@@ -9,6 +9,11 @@ var style_sheet = document.getElementsByTagName("link")[1];
 js_files = [
     'github_api.js',
     'mandrill_api.js',
+    'listen_login.js',
+    'listen_sign_up.js',
+    'listen_verification.js',
+    'listen_profile.js',
+    'listen_search.js',
     'markup.js',
     'page_turning.js',
     'function_listeners.js',

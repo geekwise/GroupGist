@@ -4,20 +4,19 @@ login_html = '' +
     '</header> ' +
     '<span>' +
     '<input id="crud_input_username" type="text"  placeholder="UserName" class="form_item"/> ' +
+        '<span id="alert_username" role="alert" class="alerts alert_hidden " > UserName is Already in use</span>'+
     '<input id="crud_input_password" type="password" placeholder="Password" class="form_item"/> ' +
     '<button id="crud_submit_login" class="form_item" type="submit">Submit</button>' +
     '<div><a href="#">Forgot password?</a><br>' +
-    '<p>Not on GroupGists <a id="sign_up_link" href="#">Sign up now</a></p></div>' +
+    '<p>Not on GroupGists <a id="sign_up_link" href="#">Sign up</a></p></div>' +
     '</span>';
 
-sign_up_html =''+
-    '<header><div><img src="images/github_logo.png"> '+
-    '<h1>SIGN UP FORM</h1></div>'+
-'</header>'+
+sign_up_html = '' +
+    "<header><div><img src=\"images/github_logo.png\"> <h1>SIGN UP FORM</h1></div>" +
+'</header>' +
 '<span>'+
 '<h3 class="form_item">Sign Up:</h3>'+
-'<input id="crud_input_username" class="form_item" type="text"  placeholder="UserName"/>'+
-    '<span id="alert_username" role="alert" class="alerts alert_hidden " > UserName is Already in use</span>'+
+'<input id="crud_input_username" class="form_item" type="text"  p\idden " > UserName is Already in use</span>'+
 '<input id="crud_input_email" class="form_item" type="email"  placeholder="Email"/>'+
     '<span id="alert_email" role="alert" class="alerts alert_hidden " > Email is Already in use</span>'+
 '<input id="crud_input_password" class="form_item" type="password"  placeholder="Password"/>'+
@@ -32,7 +31,7 @@ sign_up_html =''+
 
 verification_html = ''+
     '<header><div>'+
-    '<img src="images/github_logo.png"></img>'+
+    '<img src="images/github_logo.png">'+
     '<h1>GroupGists</h1></div>'+
     '</header>'+
     '<span>'+
@@ -47,7 +46,8 @@ verification_html = ''+
 
 profile_html = ''+
     '<header><div>'+
-    '<img src="images/github_logo.png"></div>'+
+    '<img src="images/github_logo.png">'+
+    '</div>'+
     '<h1>GroupGists</h1>'+
     '<a id="link_profile" href="#">search</a>'+
     '</header>'+
@@ -69,9 +69,9 @@ search_html = ''+
     '<h3 class="form_item">Search:</h3>'+
     '<input id="search_user_email" type="text"  placeholder="User Email" class="form_item"/>'+
     '<input id="search_user_name" type="text" placeholder="UserName" class="form_item"/>'+
-    '<button id="search_github" class="form_item" type="submit">Search</button>';
+    '<button id="search_github_button" class="form_item" type="submit">Search</button>';
 
-/**Loades next script*/
+/**Loads next script*/
 if (iscript <js_files.length) {
     script = document.createElement('script');
     script.src = 'js/' + js_files[iscript];
