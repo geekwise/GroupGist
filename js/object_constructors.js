@@ -36,7 +36,9 @@ function Crud_objects() {
     };
 /**CREATE USER OBJECT*/
   
-  /** Creates new gist for database*/
+/**
+*  Creates new gist for database
+*/
     this.method_creategists = function(){
         this.gists.create({"description":"user_database",
           "public": false,
@@ -45,8 +47,8 @@ function Crud_objects() {
               "content": ""
               }
             }
-          }, function(err, rest) {
-            console.log(rest);
+          }, function(err, res) {
+            console.log(res);
           });
         return;
     })
