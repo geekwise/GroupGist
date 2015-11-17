@@ -1,6 +1,4 @@
-/**
- * Created by Eric on 11/10/2015.
- */
+
 var supports_orientation_change = "onorientationchange" in window,
     orientation_event = supports_orientation_change ? "orientationchange" : "resize";
 
@@ -23,3 +21,4 @@ if(check === true){
 }else {
 
 }
+
