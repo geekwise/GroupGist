@@ -1,5 +1,8 @@
-var body;
-    body =document.getElementsByTagName('body')[0];
+
+var listen_profile = function(){
+
+
+};
 
 /**Loads next script*/
 if (iscript <js_files.length) {

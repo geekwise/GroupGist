@@ -16,7 +16,7 @@ obj_app.gist_list = obj_app.method_usergists();
 
 
 
-/**Loades next script*/
+/**Loads next script*/
 if (iscript <js_files.length) {
     script = document.createElement('script');
     script.src = 'js/' + js_files[iscript];

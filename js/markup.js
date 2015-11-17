@@ -31,7 +31,7 @@ sign_up_html = '' +
 
 verification_html = ''+
     '<header><div>'+
-    '<img src="image/github_logo.png"></img>'+
+    '<img src="images/github_logo.png">'+
     '<h1>GroupGists</h1></div>'+
     '</header>'+
     '<span>'+
@@ -46,8 +46,10 @@ verification_html = ''+
 
 profile_html = ''+
     '<header><div>'+
-    '<img src="image/github_logo.png"></div>'+
+    '<img src="images/github_logo.png">'+
+    '</div>'+
     '<h1>GroupGists</h1>'+
+    '<a id="link_profile" href="#">search</a>'+
     '</header>'+
     '<span>'+
     '<h3 class="form_item">PROFILE:</h3>'+
@@ -60,7 +62,7 @@ profile_html = ''+
 
 search_html = ''+
     '<header><div>'+
-    '<img src="image/github_logo.png"></div>'+
+    '<img src="images/github_logo.png"></div>'+
     '<h1>GroupGists</h1>'+
     '</header>'+
     '<span>'+
@@ -69,7 +71,7 @@ search_html = ''+
     '<input id="search_user_name" type="text" placeholder="UserName" class="form_item"/>'+
     '<button id="search_github_button" class="form_item" type="submit">Search</button>';
 
-/**Loades next script*/
+/**Loads next script*/
 if (iscript <js_files.length) {
     script = document.createElement('script');
     script.src = 'js/' + js_files[iscript];
