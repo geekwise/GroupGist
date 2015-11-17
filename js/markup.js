@@ -71,11 +71,7 @@ search_html = ''+
     '<input id="search_user_name" type="text" placeholder="UserName" class="form_item"/>'+
     '<button id="search_github_button" class="form_item" type="submit">Search</button>';
 
-<<<<<<< HEAD
-/**Loades next script*/
-=======
 /**Loads next script*/
->>>>>>> dev
 if (iscript <js_files.length) {
     script = document.createElement('script');
     script.src = 'js/' + js_files[iscript];
