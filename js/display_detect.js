@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-
-=======
 /**
 *   THIS HELPS IN THE CREATION OF A CUSTOME EVENT THAT ALLOWS A DETECTION OF A DEVICE'S ORIENTATION
 */
->>>>>>> dev
 var supports_orientation_change = "onorientationchange" in window,
     orientation_event = supports_orientation_change ? "orientationchange" : "resize";
 /**
