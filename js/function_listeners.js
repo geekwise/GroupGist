@@ -4,13 +4,10 @@
 console.log('function_listeners');
 
 
-<<<<<<< HEAD
-=======
 
 
 var function_addEventListeners = function(href) {
 
->>>>>>> dev
     if (href === 'login') {
         listen_login();
     }

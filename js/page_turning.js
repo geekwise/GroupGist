@@ -46,11 +46,7 @@ var page_turn = function(href){
 var all_loaded = function(){
     if (window.localStorage.hasOwnProperty('username')) {
         if (obj_app.user_database_json.hasOwnProperty(window.localStorage.username)) {
-<<<<<<< HEAD
-            body.innerHTML = verification_html;
-=======
             body.innerHTML = verification;
->>>>>>> dev
         }
     }
 };
