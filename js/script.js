@@ -8,6 +8,7 @@ var style_sheet = document.getElementsByTagName("link")[1];
  * */
 js_files = [
     'github_api.js',
+<<<<<<< HEAD
     'mandrill_api.js',
     'listen_login.js',
     'listen_sign_up.js',
@@ -15,12 +16,20 @@ js_files = [
     'listen_profile.js',
     'listen_search.js',
     'markup.js',
+=======
+    'mandrill_api.js',    
+>>>>>>> dev
     'page_turning.js',
-    'function_listeners.js',
     'object_constructors.js',
-    'run_script.js',
+    'run_script.js',    
+    'function_listeners.js',    
     'email_setup.js',
-    'dom_content_loaded.js',
+    'dom_content_loaded.js',    
+    'listen_login.js',
+    'listen_sign_up.js',
+    'listen_verification.js',
+    'listen_profile.js',
+    'listen_search.js',
     'display_detect.js'
 ];
 

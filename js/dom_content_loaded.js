@@ -1,3 +1,5 @@
+
+
 var body;
     body =document.getElementsByTagName('body')[0];
 

@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+/**this is currently not being used but has been left due to testing and debugging purposes
+*/
+
+
+>>>>>>> dev
 login_html = '' +
     '<header><img src="images/github_logo.png"> ' +
     '<h1>GroupGists</h1>' +
