@@ -8,19 +8,18 @@ var style_sheet = document.getElementsByTagName("link")[1];
  * */
 js_files = [
     'github_api.js',
-    'mandrill_api.js',
+    'mandrill_api.js',    
+    'page_turning.js',
+    'object_constructors.js',
+    'run_script.js',    
+    'function_listeners.js',    
+    'email_setup.js',
+    'dom_content_loaded.js',    
     'listen_login.js',
     'listen_sign_up.js',
     'listen_verification.js',
     'listen_profile.js',
     'listen_search.js',
-    'markup.js',
-    'page_turning.js',
-    'function_listeners.js',
-    'object_constructors.js',
-    'run_script.js',
-    'email_setup.js',
-    'dom_content_loaded.js',
     'display_detect.js'
 ];
 
