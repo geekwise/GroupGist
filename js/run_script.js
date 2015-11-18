@@ -7,13 +7,10 @@ console.log('run_script');
 var obj_app;
 obj_app = new Crud_objects();
 
-obj_app.token = atob("ZDdkNjFiYmExMzJlNjRjNzk0MTJlMjZkMDA4MmFkZmU1MWY4NWVkOA==");
+obj_app.token = atob("YThlOTk0MTkzMzlhMmNmNmM4YTQ1ODE2ZmY2OTE2OGY5NDE0NzBhYw==");
 obj_app.auth_type = 'token';
-/** 
-* updated and changed the token to connect to spartanadvent@github
-* need to create new data base in spartanadvent github
-*/
-obj_app.username = 'spartanadvent';
+
+obj_app.username = 'geekwisevinson';
 
 obj_app.github = obj_app.method_github();
 obj_app.user = obj_app.method_getuser();

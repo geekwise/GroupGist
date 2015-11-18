@@ -8,23 +8,23 @@ console.log('function_listeners');
 
 var function_addEventListeners = function(href) {
 
-    if (href === 'login') {
+    if (href === login_url) {
         listen_login();
     }
 
-    if (href === 'sign_up') {
+    if (href === sign_up_url) {
         listen_sign_up();
     }
 
-    if (href === 'verification') {
+    if (href === verification_url) {
         listen_verification();
     }
 
-    if (href === 'profile') {
+    if (href === profile_url) {
         listen_profile();
     }
 
-    if (href === 'search') {
+    if (href === search_url) {
         listen_search();
     }
 };
