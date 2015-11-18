@@ -1,8 +1,16 @@
-
+/**
+* this function runs each page of each html and is currently not working properly 
+*/
 console.log('function_listeners');
+
+
+<<<<<<< HEAD
+=======
+
 
 var function_addEventListeners = function(href) {
 
+>>>>>>> dev
     if (href === 'login') {
         listen_login();
     }
