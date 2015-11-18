@@ -44,6 +44,7 @@ function Crud_objects() {
     this.method_getuser =function(){
         return this.github.getUser();
     };
+
 /**
 * CREATE USER OBJECT
 */
@@ -59,6 +60,7 @@ function Crud_objects() {
             window['usergist'].callback_usergists();
         });
     };
+
 /**
 *  CREATE USER GIST LIST - HAS CALLBACK SO SYNC CAN BE ISSUE [WARNING]
 */
@@ -67,6 +69,7 @@ function Crud_objects() {
 /**
 *  CALLBACK FOR CREATE USER GIST LIST - THIS WILL RUN WHEN DATA IS RETURNED FOR EACH DATABASE 
 */
+
     this.callback_usergists= function(){
      
         this.method_getdatabase('user_database');
