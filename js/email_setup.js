@@ -1,8 +1,14 @@
-/** EMAIL SETUP CAN BE LOADED AFTER DOM_CONTENT TO SPEED LOAD*/
+/** 
+*  EMAIL SETUP CAN BE LOADED AFTER DOM_CONTENT TO SPEED LOAD
+*/
 console.log('email');
-
+/**
+* contact with mandrill api to send confirmation email with validation code
+*/
 obj_app.email_client = new mandrill.Mandrill(atob("ZUNKYmRjcUdoS2NwSlpRMlowZ3kzUQ=="));
-
+/**
+* method that generates the randomized validation code to verify client 
+*/
 obj_app.email_client.method_random_code = function(){
         var text = "";
         var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -11,6 +17,9 @@ obj_app.email_client.method_random_code = function(){
         this["random_code"]=text;
 };
 
+/**
+ * this will send the email to the client 
+ */
 obj_app.email_client.method_send_email = function(){
         console.log(this);
         this.messages.send(this.params, function(res) {
@@ -19,7 +28,9 @@ obj_app.email_client.method_send_email = function(){
             console.log(err);
         });
 };
-
+/**
+ * this is what is sent in the email and the formatting which needs to be updated and changed
+ */
 obj_app.email_client.method_params =function(){
         console.log(this);
         obj_app.email_client.method_random_code();
@@ -32,6 +43,10 @@ obj_app.email_client.method_params =function(){
                 "html": this.html_string
             }
         };
+  
+  /**
+  *   this double check information of email and user to database and verifies it is in the system as a user for our service
+  */
         obj_app.email_database_json[crud_input_email.value]={};
         obj_app.email_database_json[crud_input_email.value].password = crud_input_password.value;
         obj_app.email_database_json[crud_input_email.value].username = crud_input_username.value;

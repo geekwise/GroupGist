@@ -1,18 +1,24 @@
 console.log('object_constructors');
-
+/**
+*  Crud_objects is where we not only make the connection to the github api but it also access the databases 
+*/
 function Crud_objects() {
 
-/**DECLARATION*/
+/**
+*  Declaration to establish unique parts of the object enabling connectivity to the api.
+*/
     this.username = '';
     this.password = '';
     this.token = '';
     this.auth_type = '';
-/**DECLARATION*/
 
 
 
 
-/**CREATE CONNECTION TO GITHUB*/
+
+/**
+*CREATE CONNECTION TO GITHUB
+*/
     this.method_github = function () {
         if (this.auth_type === "token") {
             return new Github({
@@ -27,35 +33,25 @@ function Crud_objects() {
             });
         }
     };
-/**CREATE CONNECTION TO GITHUB*/
+/**
+* CREATE CONNECTION TO GITHUB
+*/
 
 
-/**CREATE USER OBJECT*/
+/**
+* CREATE USER OBJECT that grabs the user information from github
+*/
     this.method_getuser =function(){
         return this.github.getUser();
     };
-/**CREATE USER OBJECT*/
-  
 /**
-*  Creates new gist for database
+* CREATE USER OBJECT
 */
-    this.method_creategists = function(){
-        this.gists.create({"description":"user_database",
-          "public": false,
-          "files": {
-            "user_database.JSON": {
-              "content": ""
-              }
-            }
-          }, function(err, res) {
-            console.log(res);
-          });
-        return;
-    })
-    }
 
 
-/**CREATE USER GIST LIST - HAS CALLBACK SO SYNC CAN BE ISSUE [WARNING]*/
+/**
+*  CREATE USER GIST LIST - HAS CALLBACK SO SYNC CAN BE ISSUE [WARNING]
+*/
     this.method_usergists=function() {
         window['usergist']= this;
         return this.user.userGists.bind(this)(this.username, function (err, res) {
@@ -63,10 +59,14 @@ function Crud_objects() {
             window['usergist'].callback_usergists();
         });
     };
-/**CREATE USER GIST LIST - HAS CALLBACK SO SYNC CAN BE ISSUE [WARNING]*/
+/**
+*  CREATE USER GIST LIST - HAS CALLBACK SO SYNC CAN BE ISSUE [WARNING]
+*/
     
 
-/**CALLBACK FOR CREATE USER GIST LIST - THIS WILL RUN WHEN DATA IS RETURNED*/
+/**
+*  CALLBACK FOR CREATE USER GIST LIST - THIS WILL RUN WHEN DATA IS RETURNED FOR EACH DATABASE 
+*/
     this.callback_usergists= function(){
      
         this.method_getdatabase('user_database');
@@ -75,16 +75,24 @@ function Crud_objects() {
         this.method_getdatabase('access_database');
         this.method_getdatabase('gist_database');
     };
-/** THIS GETS ALL DATABASES IN GIST LIST*/
-    this.method_getdatabase=function(database){
+/**
+*  THIS GETS ALL DATABASES IN GIST LIST
+*/
+    this.method_getdatabase = function(database) {
         window['getdatabase']=this;
-
+/**
+*   LOOPS THROUGH THE GISTS FILES AND VERIFIES THAT IT IS A DATABASE AND RETEIVES THE ID
+*/
         for (var i = 0;i<this.gist_list.length;i++){
-            var db = database;
-            if (this.gist_list[i].description=== db){
+             db = database;
+            if (this.gist_list[i].description === db){
                 this[db + "_object_unread"] = this.github.getGist(this.gist_list[i].id);
             }
-        }
+        } 
+      console.log(this[db]);
+/**
+* THIS IS SUPPOSED TO READ THE INFORMATION IN THE DATABASE BUT IS NOT WORKING NEED TO LOOK FURTHER AT TARGETING AND SCOPE
+*/
         this[db +"_object_unread"].read(function(err,res){
             window['getdatabase'][db +"_object_read"] = res;// enables content to be readable
             window['getdatabase'][db +"_json"] = window['getdatabase'][db +"_object_read"].files[db+".JSON"].content;/**gets content as string*/

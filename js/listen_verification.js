@@ -1,22 +1,27 @@
 var listen_verification = function() {
+  
     if (obj_app.user_database_json.hasOwnProperty(crud_input_username.value)) {
+      
         if (!obj_app.user_database_json[crud_input_username.value].hasOwnProperty('random_code')) {
+          
             alert('successfully verified');
         } else {
         }
     }
     crud_submit_verification.addEventListener('click', function () {
+      
         if (obj_app.user_database_json.hasOwnProperty(crud_input_username.value)) {
-            if (obj_app.user_database_json[crud_input_username.value].random_code === crud_input_code.value) {
+      
+          if (obj_app.user_database_json[crud_input_username.value].random_code === crud_input_code.value) {
                 alert('successfully verified');
-                page_turn('profile');
+                page_turn(profile);
             }
         } else {
             alert('user not found')
         }
     });
     login_link.addEventListener('click', function () {
-        page_turn('login');
+        page_turn(login);
     });
     console.log('verification listeners');
 };
