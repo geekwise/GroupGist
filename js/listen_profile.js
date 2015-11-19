@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 console.log('profile_page');
+=======
+>>>>>>> master
 
 var listen_profile = function(){
 
