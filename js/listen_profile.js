@@ -1,3 +1,4 @@
+console.log('profile_page');
 
 var listen_profile = function(){
 
