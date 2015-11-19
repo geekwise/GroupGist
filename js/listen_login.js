@@ -14,16 +14,16 @@ var listen_login = function(){
         obj_app.username = login_username.value.toLowerCase();
         obj_app.password = login_password.value;
       
-        if (obj_app.user_database_json.hasOwnProperty(login_username.value)) {
+        if (obj_app.user_database_json.hasOwnProperty(obj_app.username)) {
           
-            if (obj_app.user_database_json[login_username.value].password === login_password.value) {
+            if (obj_app.user_database_json[obj_app.username].password === login_password.value) {
               
-                alert('successfully logged in');
+                console.log('successfully logged in');
                 window.localStorage.username = [obj_app.username];
-                page_turn(profile);
+                page_turn(profile_url);
 
-            }else{alert('username does not match password')}
-        }else{alert('username not found. Sign Up?')}
+            }else{console.log('username does not match password')}
+        }else{console.log('username not found. Sign Up?')}
 
         /**link to profile page not to verification after login*/
         /** needs to go to verification incase they have signup and not verified*/
@@ -32,7 +32,7 @@ var listen_login = function(){
     });
     signup_link.addEventListener('click', function () {
 
-        page_turn(sign_up);
+        page_turn(sign_up_url);
     });
     console.log('login_listeners')
 };
