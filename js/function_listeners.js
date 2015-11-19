@@ -38,7 +38,11 @@ var function_addEventListeners = function(href) {
         head.appendChild(script);
         iscript++;
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 =======
     }
 >>>>>>> master
+=======
+    }
+>>>>>>> dev

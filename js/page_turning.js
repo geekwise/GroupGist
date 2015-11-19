@@ -12,14 +12,20 @@ var page_turn = function(href){
 var all_loaded = function(){
     if (window.localStorage.hasOwnProperty('username')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (obj_app.user_database_json.hasOwnProperty(window.localStorage.username)) {
            // body.innerHTML = verification;
 =======
+=======
+>>>>>>> dev
         if (obj_app.hasOwnProperty('user_database_json')){
             if (obj_app.user_database_json.hasOwnProperty(window.localStorage.username)) {
                // body.innerHTML = verification;
             }
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> dev
         }
     }
 };

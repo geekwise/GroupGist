@@ -23,12 +23,17 @@ var listen_login = function(){
                 page_turn('profile');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             }else{console.log('username does not match password')}
         }else{console.log('username not found. Sign Up?')}
 =======
             }else{alert('username does not match password')}
         }else{alert('username not found. Sign Up?')}
 >>>>>>> master
+=======
+            }else{alert('username does not match password')}
+        }else{alert('username not found. Sign Up?')}
+>>>>>>> dev
 
         /**link to profile page not to verification after login*/
         /** needs to go to verification incase they have signup and not verified*/
@@ -38,10 +43,14 @@ var listen_login = function(){
     signup_link.addEventListener('click', function () {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         page_turn(sign_up_url);
 =======
         page_turn('sign_up');
 >>>>>>> master
+=======
+        page_turn('sign_up');
+>>>>>>> dev
     });
     console.log('login_listeners')
 };
