@@ -37,12 +37,4 @@ var function_addEventListeners = function(href) {
         script.src = 'js/' + js_files[iscript];
         head.appendChild(script);
         iscript++;
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
-=======
-    }
->>>>>>> master
-=======
-    }
->>>>>>> dev

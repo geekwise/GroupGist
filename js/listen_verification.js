@@ -4,15 +4,7 @@ var listen_verification = function() {
       
         if (!obj_app.user_database_json[crud_input_username.value].hasOwnProperty('random_code')) {
           
-<<<<<<< HEAD
-<<<<<<< HEAD
-            console.log('successfully verified');
-=======
             alert('successfully verified');
->>>>>>> master
-=======
-            alert('successfully verified');
->>>>>>> dev
         } else {
         }
     }
@@ -29,15 +21,7 @@ var listen_verification = function() {
         }
     });
     login_link.addEventListener('click', function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        page_turn(login_url);
-=======
         page_turn("login");
->>>>>>> master
-=======
-        page_turn("login");
->>>>>>> dev
     });
     console.log('verification listeners');
 };
