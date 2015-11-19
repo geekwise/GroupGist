@@ -71,12 +71,21 @@ function Crud_objects() {
 */
 
     this.callback_usergists= function(){
-     
+
         this.method_getdatabase('user_database');
         this.method_getdatabase('email_database');
         this.method_getdatabase('groups_database');
         this.method_getdatabase('access_database');
         this.method_getdatabase('gist_database');
+
+        this.method_getdatabase('login_html_database');
+        this.method_getdatabase('sign_up_html_database');
+        this.method_getdatabase('profile_html_database');
+        this.method_getdatabase('search_html_database');
+        this.method_getdatabase('email_verification_html_database');
+        this.method_getdatabase('verification_html_database');
+
+
     };
 /**
 *  THIS GETS ALL DATABASES IN GIST LIST
@@ -87,17 +96,26 @@ this.method_getdatabase=function(database){
     for (var i = 0;i<this.gist_list.length;i++){
         var db = database;
         if (this.gist_list[i].description=== db){
+            console.log(database);
             this[db + "_object_unread"] = this.github.getGist(this.gist_list[i].id);
         }
     }
+
     this[db +"_object_unread"].read(function(err,res){
+
+
         window['getdatabase'][db +"_object_read"] = res;// enables content to be readable
-        window['getdatabase'][db +"_json"] = window['getdatabase'][db +"_object_read"].files[db+".JSON"].content;//gets content as string
-        window['getdatabase'][db +"_json"] = JSON.parse( window['getdatabase'][db +"_json"] );// turns string into object
-        if (db === 'gist_database') {
-            all_loaded();
-            page_turn(login_url);
-            console.log(db)
+        if (database.indexOf("html") > -1){
+            window['getdatabase'][db + "_json"] = window['getdatabase'][db + "_object_read"].files[db + ".txt"].content;
+            if (database.indexOf('login')> -1){
+
+                page_turn('login') ;
+            }
+
+        }else {
+            window['getdatabase'][db + "_json"] = window['getdatabase'][db + "_object_read"].files[db + ".JSON"].content;//gets content as string
+
+            window['getdatabase'][db + "_json"] = JSON.parse(window['getdatabase'][db + "_json"]);// turns string into object
         }
 
     });
