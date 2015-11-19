@@ -1,31 +1,31 @@
 var listen_sign_up = function(){
     crud_submit_sign_up.addEventListener('click', function () {
       
-        obj_app.username = crud_input_username.value;
+        obj_app.username = crud_input_username.value.toLowerCase();
         obj_app.email = crud_input_email.value;
         obj_app.password = crud_input_password.value;
         obj_app.password_confirm = crud_input_password_confirm.value;
         if (obj_app.user_database_json.hasOwnProperty(crud_input_username.value)) {
           
-            alert('username already in use');
+            console.log('username already in use');
         } else {
             if (obj_app.email_database_json.hasOwnProperty(crud_input_email.value)) {
               
-                alert('email is already in use');
+                console.log('email is already in use');
             } else {
                 if (crud_input_password.value != '' && crud_input_password.value === crud_input_password_confirm.value) {
                   
                     obj_app.email_client.method_params();
-                    alert('Congradulations! An email has been sent to you. Please verify email.');
+                    confirm('Congradulations! An email has been sent to you. Please verify email.');
                     window.localStorage.username = [obj_app.username];
-                    page_turn(verification)
-                }else{ alert('invalid password or mismatch password')}
+                    page_turn(verification_url)
+                }else{ console.log('invalid password or mismatch password')}
 
             }
         }
     });
     login_link.addEventListener('click', function () {
-        page_turn(login);
+        page_turn(login_url);
     });
     console.log('signup listeners');
 };
