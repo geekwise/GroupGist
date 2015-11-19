@@ -1,5 +1,5 @@
 console.log('listen login');
-page_turn(login);
+
 var listen_login = function(){
   
   login_button = document.getElementsByTagName('button')[0];

@@ -81,33 +81,27 @@ function Crud_objects() {
 /**
 *  THIS GETS ALL DATABASES IN GIST LIST
 */
-    this.method_getdatabase = function(database) {
-        window['getdatabase']=this;
-/**
-*   LOOPS THROUGH THE GISTS FILES AND VERIFIES THAT IT IS A DATABASE AND RETEIVES THE ID
-*/
-        for (var i = 0;i<this.gist_list.length;i++){
-             db = database;
-            if (this.gist_list[i].description === db){
-                this[db + "_object_unread"] = this.github.getGist(this.gist_list[i].id);
-            }
-        } 
-      console.log(this[db]);
-/**
-* THIS IS SUPPOSED TO READ THE INFORMATION IN THE DATABASE BUT IS NOT WORKING NEED TO LOOK FURTHER AT TARGETING AND SCOPE
-*/
-        this[db +"_object_unread"].read(function(err,res){
-            window['getdatabase'][db +"_object_read"] = res;// enables content to be readable
-            window['getdatabase'][db +"_json"] = window['getdatabase'][db +"_object_read"].files[db+".JSON"].content;/**gets content as string*/
-            window['getdatabase'][db +"_json"] = JSON.parse( window['getdatabase'][db +"_json"]);/**turns string into object*/
-            if (db === 'gist_database') {
-                all_loaded();
-                page_turn('login');
-                console.log(db)
-            }
+this.method_getdatabase=function(database){
+    window['getdatabase']=this;
 
-        });
-    };
+    for (var i = 0;i<this.gist_list.length;i++){
+        var db = database;
+        if (this.gist_list[i].description=== db){
+            this[db + "_object_unread"] = this.github.getGist(this.gist_list[i].id);
+        }
+    }
+    this[db +"_object_unread"].read(function(err,res){
+        window['getdatabase'][db +"_object_read"] = res;// enables content to be readable
+        window['getdatabase'][db +"_json"] = window['getdatabase'][db +"_object_read"].files[db+".JSON"].content;//gets content as string
+        window['getdatabase'][db +"_json"] = JSON.parse( window['getdatabase'][db +"_json"] );// turns string into object
+        if (db === 'gist_database') {
+            all_loaded();
+            page_turn(login_url);
+            console.log(db)
+        }
+
+    });
+};
 }
 /**CALLBACK FOR CREATE USER GIST LIST - THIS WILL RUN WHEN DATA IS RETURNED*/
 

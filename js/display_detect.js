@@ -1,3 +1,5 @@
+console.log('display_detect');
+
 /**
 *   THIS HELPS IN THE CREATION OF A CUSTOME EVENT THAT ALLOWS A DETECTION OF A DEVICE'S ORIENTATION
 */
@@ -6,6 +8,7 @@ var supports_orientation_change = "onorientationchange" in window,
 /**
 *   THIS CHECKS TO SEE IF THE USER IS ON A MOBILE DEVICE AND WHAT BROWSER THEY ARE USING
 */
+var check;
 window.mobile_check = function() {
    check = false;
     (function(a){
@@ -28,4 +31,3 @@ if(check === true){
 }else {
 
 }
-

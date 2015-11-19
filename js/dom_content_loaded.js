@@ -1,7 +1,6 @@
-
-
 var body;
     body =document.getElementsByTagName('body')[0];
+
 
 /**Loads next script*/
 if (iscript <js_files.length) {
@@ -10,3 +9,7 @@ if (iscript <js_files.length) {
     head.appendChild(script);
     iscript++;
 }
+
+document.addEventListener('DOMContentLoaded',function(){
+    page_turn(login_url);
+});
