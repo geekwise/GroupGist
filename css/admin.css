@@ -13,6 +13,9 @@ html,body{
     height:100%;
     background-color: #e9ecee;
 }
+textarea{
+    overflow: scroll;
+}
 
 header{
     text-align: center;
@@ -20,7 +23,7 @@ header{
 
 p{
     color: #B6B9BC;
-    margin: -0.5rem;
+
 }
 
 a{
@@ -74,7 +77,7 @@ button{
 
 input{
     text-align: center;
-
+   
 }
 
 
