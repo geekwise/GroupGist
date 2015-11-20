@@ -42,3 +42,51 @@ if (iscript <js_files.length) {
     head.appendChild(script);
     iscript++;
 }
+
+
+
+
+var develop_tool = [];
+var text_box = document.createElement('input');
+text_box.type = 'text-area';
+
+document.addEventListener('keydown',function(event){
+   if (event.keyCode === 37){
+       develop_tool[0]=1;
+   }
+    if (event.keyCode === 38){
+        develop_tool[1]=1;
+    }
+
+    if (develop_tool[0]=== 1 && develop_tool[1]===1){
+        develop_tool = [];
+        var c_database = prompt('which database');
+        console.log(c_database+'_database_object_read');
+        console.log(obj_app[c_database+'_database_object_read']);
+        console.log(obj_app[c_database+'_database_object_read'].files[c_database+"_database.txt"].content);
+       // var c_update = prompt('enter data');
+        body.innerHTML = '';
+        body.appendChild(text_box);
+
+
+        text_box.value = obj_app[c_database+'_database_object_read'].files[c_database+"_database.txt"].content;
+
+
+
+            //obj_app[c_database+'database_object_unread'].update(obj_app[c_database+'database_object_read'], function () {
+            //
+            //});
+
+    }
+    console.log(develop_tool);
+});
+
+document.addEventListener('keyup',function(event){
+    if (event.keyCode === 37 ){
+        develop_tool[0]=0;
+    }
+    if (event.keyCode === 38 ){
+        develop_tool[1]=0;
+    }
+    console.log(develop_tool);
+});
