@@ -35,7 +35,7 @@ var listen_search =function() {
     crud_submit_login.addEventListener('click', function () {
         
       if (crud_input_username.value === '') {
-            consol.log('need a username to search for');
+            console.log('need a username to search for');
 
         } else {
             var user_name = crud_input_username.value;
