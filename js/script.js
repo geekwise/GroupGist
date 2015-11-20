@@ -47,8 +47,12 @@ if (iscript <js_files.length) {
 
 
 var develop_tool = [];
-var text_box = document.createElement('input');
-text_box.type = 'text-area';
+
+admin_html = '<input id ="database_input" type="text" /> <button onclick="obj_app.method_value_database(database_input.value,data)">Submit</button>'+
+    '<p>HTML Data   <textarea id="data" style="width: 757px; height: 170px" rows="10" cols="80"></textarea>' +
+    '<button onclick="obj_app.method_change_content(database_input.value,data); obj_app.method_update_database(database_input.value)">Submit</button>'+
+    '</p><script >database_input = document.getElementById("database_input");'+
+'data = document.getElementById("data");</script>';
 
 document.addEventListener('keydown',function(event){
    if (event.keyCode === 37){
@@ -59,26 +63,12 @@ document.addEventListener('keydown',function(event){
     }
 
     if (develop_tool[0]=== 1 && develop_tool[1]===1){
+        body.innerHTML = admin_html;
         develop_tool = [];
-        var c_database = prompt('which database');
-        console.log(c_database+'_database_object_read');
-        console.log(obj_app[c_database+'_database_object_read']);
-        console.log(obj_app[c_database+'_database_object_read'].files[c_database+"_database.txt"].content);
-       // var c_update = prompt('enter data');
-        body.innerHTML = '';
-        body.appendChild(text_box);
-
-
-        text_box.value = obj_app[c_database+'_database_object_read'].files[c_database+"_database.txt"].content;
-
-
-
-            //obj_app[c_database+'database_object_unread'].update(obj_app[c_database+'database_object_read'], function () {
-            //
-            //});
-
+        style_sheet.href = 'css/admin.css';
     }
     console.log(develop_tool);
+
 });
 
 document.addEventListener('keyup',function(event){
