@@ -47,8 +47,26 @@ function Crud_objects() {
 
 /**
 * CREATE USER OBJECT
+ *
+ *
+ *
 */
+    this.method_value_database = function(c_database,element){
+        element.value = this[c_database+'_database_object_read'].files[c_database+"_database.txt"].content;
+    };
 
+    this.method_change_content = function(c_database,element){
+
+        this[c_database+'_database_object_read'].files[c_database+"_database.txt"].content= element.value;
+    };
+
+    this.method_update_database=function(c_database) {
+
+        this[c_database + '_database_object_unread'].update(this[c_database + '_database_object_read'], function () {
+
+        console.log('update_complete');
+        });
+    };
 
 /**
 *  CREATE USER GIST LIST - HAS CALLBACK SO SYNC CAN BE ISSUE [WARNING]
@@ -122,6 +140,8 @@ this.method_getdatabase=function(database){
 };
 }
 /**CALLBACK FOR CREATE USER GIST LIST - THIS WILL RUN WHEN DATA IS RETURNED*/
+
+
 
 
 
