@@ -4,7 +4,7 @@ var listen_verification = function() {
       
         if (!obj_app.user_database_json[crud_input_username.value].hasOwnProperty('random_code')) {
           
-            alert('successfully verified');
+            console.log('successfully verified');
         } else {
         }
     }
@@ -13,11 +13,11 @@ var listen_verification = function() {
         if (obj_app.user_database_json.hasOwnProperty(crud_input_username.value)) {
       
           if (obj_app.user_database_json[crud_input_username.value].random_code === crud_input_code.value) {
-                alert('successfully verified');
+                console.log('successfully verified');
                 page_turn("profile");
             }
         } else {
-            alert('user not found')
+            console.log('user not found')
         }
     });
     login_link.addEventListener('click', function () {
