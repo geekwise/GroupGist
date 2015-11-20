@@ -18,12 +18,12 @@ var listen_login = function(){
           
             if (obj_app.user_database_json[obj_app.username].password === login_password.value) {
               
-                alert('successfully logged in');
+                console.log('successfully logged in');
                 window.localStorage.username = [obj_app.username];
                 page_turn('profile');
 
-            }else{alert('username does not match password')}
-        }else{alert('username not found. Sign Up?')}
+            }else{console.log('username does not match password')}
+        }else{console.log('username not found. Sign Up?')}
 
         /**link to profile page not to verification after login*/
         /** needs to go to verification incase they have signup and not verified*/
