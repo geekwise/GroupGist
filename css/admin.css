@@ -71,27 +71,6 @@ button{
     border:none;
 }
 
-
-
-
-
-input{
-    text-align: center;
-   
-}
-
-
-input:nth-of-type(1){
-  margin-bottom: 0;
-  border-radius: 5px 5px 0px 0px;
-}
-input:last-of-type{
-  margin-top: 0;
-  border-radius: 0px 0px 5px 5px;
-}
-
-
-
 .form_item{
 
     padding: .2rem 0;

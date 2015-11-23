@@ -97,11 +97,26 @@ function Crud_objects() {
         this.method_getdatabase('gist_database');
 
         this.method_getdatabase('login_html_database');
+        this.method_getdatabase('login_css_database');
+
         this.method_getdatabase('sign_up_html_database');
+        this.method_getdatabase('sign_up_css_database');
+
         this.method_getdatabase('profile_html_database');
+        this.method_getdatabase('profile_css_database');
+
         this.method_getdatabase('search_html_database');
+        this.method_getdatabase('search_css_database');
+
         this.method_getdatabase('email_verification_html_database');
+        this.method_getdatabase('email_verification_css_database');
+
         this.method_getdatabase('verification_html_database');
+        this.method_getdatabase('verification_css_database');
+
+        this.method_getdatabase('admin_html_database');
+        this.method_getdatabase('admin_css_database');
+
 
 
     };
@@ -118,12 +133,12 @@ this.method_getdatabase=function(database){
             this[db + "_object_unread"] = this.github.getGist(this.gist_list[i].id);
         }
     }
-
+    console.log(db);
     this[db +"_object_unread"].read(function(err,res){
 
 
         window['getdatabase'][db +"_object_read"] = res;// enables content to be readable
-        if (database.indexOf("html") > -1){
+        if (database.indexOf("html") > -1 ||database.indexOf("css") > -1 ){
             window['getdatabase'][db + "_json"] = window['getdatabase'][db + "_object_read"].files[db + ".txt"].content;
             if (database.indexOf('login')> -1){
 
