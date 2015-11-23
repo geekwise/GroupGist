@@ -3,9 +3,11 @@ console.log('page_turning');
 
 
 var page_turn = function(href){
-    style_sheet.href = 'css/'+href+'.css';
+
+    style_sheet.innerHTML = obj_app[href +"_css_database_json"];
     body.innerHTML = obj_app[href + "_html_database_json"];
     function_addEventListeners(href);
+
 };
 
 
