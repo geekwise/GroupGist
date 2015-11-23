@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>User Authentication App</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+   <!-- <link rel="stylesheet" href="css/media_queries.css"> -->
+    <style id="style_sheet">h1{color:red;}</style>
+    <script src="js/script.js"></script>
+</head>
+<body>
+
+<input id ="database_input" type="text" />
+<button onclick="obj_app.method_value_database(database_input.value,data);obj_app.method_value_database(database_input.value.replace('html','css'),css);">Submit</button>
+<p>HTML Data
+    <textarea id="data" style="width: 757px; height: 170px" rows="10" cols="80"></textarea>
+    <button onclick="obj_app.method_change_content(database_input.value,data); obj_app.method_update_database(database_input.value)">Submit</button>
+</p>
+<p>CSS Data
+    <textarea id="css" style="width: 757px; height: 170px" rows="10" cols="80"></textarea>
+    <button onclick="obj_app.method_change_content(database_input.value.replace('html','css'),css); obj_app.method_update_database(database_input.value.replace('html','css'))">Submit</button>
+</p>
+<script >database_input = document.getElementById("database_input");data = document.getElementById("data");css = document.getElementById('css'); console.log('this is ' +css);</script>
+
+
+</body>
+</html>
