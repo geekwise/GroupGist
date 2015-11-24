@@ -51,21 +51,32 @@ function Crud_objects() {
  *
  *
 */
-    this.method_value_database = function(c_database,element){
-        element.value = this[c_database+'_database_object_read'].files[c_database+"_database.txt"].content;
+    this.method_value_database = function(database,element){
+        if (database.indexOf("html") > -1 ||database.indexOf("css") > -1 || database.indexOf("listen") > -1  ) {
+            element.value = this[database + '_database_object_read'].files[database + "_database.txt"].content;
+        }else{
+            element.value = this[database + '_database_object_read'].files[database + "_database.JSON"].content;
+        }
     };
 
-    this.method_change_content = function(c_database,element){
-
-        this[c_database+'_database_object_read'].files[c_database+"_database.txt"].content= element.value;
+    this.method_change_content = function(database,element){
+        if (database.indexOf("html") > -1 ||database.indexOf("css") > -1 || database.indexOf("listen") > -1  ) {
+            this[database + '_database_object_read'].files[database + "_database.txt"].content = element.value;
+        }else{
+            this[database + '_database_object_read'].files[database + "_database.JSON"].content = element.value;
+        }
     };
 
-    this.method_update_database=function(c_database) {
-
-        this[c_database + '_database_object_unread'].update(this[c_database + '_database_object_read'], function () {
-
-        console.log('update_complete');
-        });
+    this.method_update_database=function(database) {
+        if (database.indexOf("html") > -1 ||database.indexOf("css") > -1 || database.indexOf("listen") > -1  ) {
+            this[database + '_database_object_unread'].update(this[database + '_database_object_read'], function () {
+                console.log('update_complete');
+            });
+        }else{
+            this[database + '_database_object_unread'].update(this[database + '_database_object_read'], function () {
+                console.log('update_complete');
+            });
+        }
     };
 
 /**
@@ -118,7 +129,7 @@ function Crud_objects() {
         this.method_getdatabase('admin_css_database');
 
         this.method_getdatabase('revert_database');
-
+        this.method_getdatabase('sign_up_listen_database');
     };
 /**
 *  THIS GETS ALL DATABASES IN GIST LIST
@@ -138,7 +149,7 @@ this.method_getdatabase=function(database){
 
 
         window['getdatabase'][db +"_object_read"] = res;// enables content to be readable
-        if (database.indexOf("html") > -1 ||database.indexOf("css") > -1 ){
+        if (database.indexOf("html") > -1 ||database.indexOf("css") > -1 || database.indexOf("listen") > -1  ){
             window['getdatabase'][db + "_json"] = window['getdatabase'][db + "_object_read"].files[db + ".txt"].content;
             if (database.indexOf('login')> -1){
 
