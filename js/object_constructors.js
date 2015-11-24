@@ -117,7 +117,7 @@ function Crud_objects() {
         this.method_getdatabase('admin_html_database');
         this.method_getdatabase('admin_css_database');
 
-
+        this.method_getdatabase('revert_database');
 
     };
 /**
