@@ -1,0 +1,1 @@
+'Code:'+ ' ' + this.random_code + '\ <br />'+'Congratulations  ' + crud_input_username.value + '! please enter code to finished the sign up process. thank you and have a nice day!'
