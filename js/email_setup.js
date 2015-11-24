@@ -40,7 +40,7 @@ obj_app.email_client.method_params =function(){
                 "from_email":"vinsonfernandez27@gmail.com",
                 "to":[{"email":crud_input_email.value}],
                 "subject": "Thanks for signing up",
-                "html": obj_app.ema
+                "html": obj_app.email_verification_html_database_json
             }
         };
   
