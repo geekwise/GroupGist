@@ -6,8 +6,9 @@ var page_turn = function(href){
 
     style_sheet.innerHTML = obj_app[href +"_css_database_json"];
     body.innerHTML = obj_app[href + "_html_database_json"];
-    function_addEventListeners(href);
-
+    //function_addEventListeners(href);
+    console.log(obj_app[href + '_listen_database_json']);
+    eval(obj_app[href + '_listen_database_json']);
 };
 
 
