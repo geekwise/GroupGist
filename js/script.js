@@ -12,17 +12,18 @@ js_files = [
     'page_turning.js',
     'object_constructors.js',
     'run_script.js',    
-    'function_listeners.js',    
+
     'email_setup.js',
-    'dom_content_loaded.js',    
-    'listen_login.js',
-    'listen_sign_up.js',
-    'listen_verification.js',
-    'listen_profile.js',
-    'listen_search.js',
+    'dom_content_loaded.js',
     'display_detect.js'
 ];
-
+/*   'function_listeners.js',
+ 'listen_login.js',
+ 'listen_sign_up.js',
+ 'listen_verification.js',
+ 'listen_profile.js',
+ 'listen_search.js',
+ */
 
 /***
  * script is the renamed variable to new script after each is loaded
