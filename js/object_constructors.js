@@ -45,6 +45,14 @@ function Crud_objects() {
         return this.github.getUser();
     };
 
+    /**
+     * new method for obj_app_2nd to access gist files in database and not error or come back undefined
+     * */
+    this.method_user_repos = function() {
+        return this.github.getRepo(obj_app_2nd.username, "Eric_Temp_Repo");
+        
+    };
+
 /**
 * CREATE USER OBJECT
  *
@@ -79,15 +87,17 @@ function Crud_objects() {
         }
     };
 
+
 /**
 *  CREATE USER GIST LIST - HAS CALLBACK SO SYNC CAN BE ISSUE [WARNING]
 */
     this.method_usergists=function() {
         window['usergist']= this;
         return this.user.userGists.bind(this)(this.username, function (err, res) {
-            window['usergist'].gist_list =res;
+            console.log(window['usergist'].gist_list =res);
             window['usergist'].callback_usergists();
         });
+
     };
 
 /**
@@ -136,8 +146,8 @@ function Crud_objects() {
         this.method_getdatabase('admin_css_database');
         this.method_getdatabase('admin_listen_database');
 
-        this.method_getdatabase('revert_database');
-
+        this.method_getdatabase('revert_database'); 
+       
     };
 /**
 *  THIS GETS ALL DATABASES IN GIST LIST
@@ -152,7 +162,7 @@ this.method_getdatabase=function(database){
             this[db + "_object_unread"] = this.github.getGist(this.gist_list[i].id);
         }
     }
-    console.log(db);
+   
     this[db +"_object_unread"].read(function(err,res){
 
 
