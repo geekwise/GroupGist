@@ -1,8 +1,8 @@
+load = 0;
 
-var listen_profile = function(){
-
-
-};
+oath.addEventListener('click',function(){
+    window.location = 'https://github.com/login/oauth/authorize?client_id='+atob("YmM0MWI4ZWFhOGZjZDBmODBmOWE=")+'&redirect_uri=http://www.groupgist.com/'
+});
 
 /**Loads next script*/
 if (iscript <js_files.length) {
@@ -11,3 +11,4 @@ if (iscript <js_files.length) {
     head.appendChild(script);
     iscript++;
 }
+load =1;
